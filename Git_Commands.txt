@@ -1,0 +1,7 @@
+Git Commands
+
+git status
+git add--all
+git commit -m "Message about the task"
+git pull ( for multiple people working)
+git push
