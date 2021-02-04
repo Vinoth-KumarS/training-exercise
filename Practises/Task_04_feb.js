@@ -45,7 +45,7 @@ console.log(abbrev_name("Robin Singh"));
 //function to extract a specified number of characters from a string.
 
 function truncate_string(str, length) {
-    if ((str === String) && (length > 0)) {
+    if ((typeof str === "string") && (length > 0)) {
         return str.slice(0, length)
     }
 }
