@@ -1,7 +1,16 @@
-function js_style() {
-    var text = document.getElementById("text")
+// 1. Write a JavaScript program to list the properties of a JavaScript object.
+// Sample object:
+// var student = {
+// name : "David Rayy",
+// sclass : "VI",
+// rollno : 12 };
+// Sample Output: name,sclass,rollno
 
-    text.style.fontSize = "14pt";
-    text.style.fontFamily = "Comic Sans MS";
-    text.style.color = "green";
+
+var student = {
+    name: "David Rayy",
+    sclass: "VI",
+    rollno: 12
+
 }
+console.log(student.name + "," + student.sclass + "," + student.rollno)
