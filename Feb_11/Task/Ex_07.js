@@ -4,6 +4,9 @@
 // "robin-singh-from-usa"
 
 string_parameterize = function(input) {
-    return input.trim().toLowerCase().replace().replace(" ", "-");
+    var words = [];
+    for (var i = 0; i < input.length; i++) {
+        console.log(input[i]);
+    }
 };
 console.log(string_parameterize("Robin Singh from USA."));

@@ -501,7 +501,7 @@ var output = myFilter(arr, function(input) {
 console.log(output);
 
 
-50 / 100 pass
+// 50 / 100 pass
 
 function getResult(marks1, marks2, grade, failgrade) {
     var result;
