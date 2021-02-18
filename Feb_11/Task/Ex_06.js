@@ -3,16 +3,14 @@
 // console.log(protect_email("robin_singh@example.com"));
 // "robin...@example.com"
 
-
-function protectEmail(input) {
-    var chars = email.split("@");
-    var firstChar = chars[0];
-    var part = firstChar.length / 2,
-        firstChar = firstChar.substring(0, (firstChar.length - part));
-    var secondChar = chars[1];
-    console.log(firstChar + "..." + secondChar)
+function protect_email(email) {
+    var splitPoint, firstPart, lastPart, meanValue;
+    splitPoint = email.split("@");
+    firstPart = splitPoint[0];
+    lastPart = splitPoint[1];
+    meanValue = firstPart.length / 2
+    firstPart = firstPart.substring(0, firstPart.length - meanValue)
+    return firstPart + "...@" + lastPart;
 
 }
-
-var email = "robin_singh@example.com";
-protectEmail(email);
+console.log(protect_email("Abinesh.vel@example.com"));

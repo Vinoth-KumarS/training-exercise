@@ -2,3 +2,17 @@
 // Test Data :
 // console.log(swapcase('AaBbc'));
 // "aAbBC"
+
+
+function swapcase(str) {
+    let swapstr = "";
+    for (const s of str) {
+        if (s === s.toUpperCase()) {
+            swapstr += s.toLowerCase();
+        } else {
+            swapstr += s.toUpperCase()
+        }
+    }
+    return swapstr;
+}
+console.log(swapcase('AaBbCcDdEe'));
