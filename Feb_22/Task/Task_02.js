@@ -1,12 +1,19 @@
-function Js_Dom(input) {
-    const a = document.querySelector(input);
-    if (a) {
-        return true;
-    } else {
-        return false;
-    }
-    console.log(a);
-}
+ var elements = document.getElementsByClassName("a")
 
+ function hasCheckedDom(input) {
+     if (input.nodeType == 1) {
+         return true;
+     } else {
+         return false;
+     }
 
-console.log(Js_Dom('h1'))
+ }
+
+ console.log(hasCheckedDom(elements[0]));
+ console.log(hasCheckedDom(elements[1]));
+ console.log(hasCheckedDom(elements[2]));
+
+ console.log(hasCheckedDom("vinoth"));
+ console.log(hasCheckedDom(12));
+ console.log(hasCheckedDom({}));
+ console.log(hasCheckedDom([]));
