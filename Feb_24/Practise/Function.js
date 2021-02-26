@@ -19,45 +19,7 @@ function myFunction() {
 }
 // console.log(myFunction());
 
-const bioDetail = {
-        firstName: "Vinoth",
-        lastName: "Kumar",
-        fullName: function() {
-            return this.firstName + " " + this.lastName
-        }
-    }
-    // console.log(bioDetail.fullName(), bioDetail.firstName)
 
-const employeeDetails = [{
-        name: "vinoth",
-        age: 26,
-        native: "tirunelveli"
-    },
-    {
-        name: "umar",
-        age: 25,
-        native: "chennai"
-    },
-    {
-        name: "dhanu",
-        age: 28,
-        native: "dubai"
-    },
-    {
-        name: "bala",
-        age: 29,
-        native: "kanchipuram"
-    }
-]
-
-
-function employees(employee) {
-    employee.forEach(element => {
-        console.log([element.name, element.native])
-    });
-
-}
-// employees(employeeDetails)
 
 
 
@@ -98,4 +60,46 @@ function details(input) {
     return output
 
 }
-console.log(details(bookDetails))
+// console.log(details(bookDetails))
+
+const bioDetail = {
+        firstName: "Vinoth",
+        lastName: "Kumar",
+        fullName: function() {
+            return this.firstName + " " + this.lastName
+        }
+    }
+    // console.log(bioDetail.fullName(), bioDetail.firstName)
+
+const employeeDetails = [{
+        name: "vinoth",
+        age: 26,
+        native: "tirunelveli"
+    },
+    {
+        name: "umar",
+        age: 25,
+        native: "chennai"
+    },
+    {
+        name: "dhanu",
+        age: 28,
+        native: "dubai"
+    },
+    {
+        name: "bala",
+        age: 29,
+        native: "kanchipuram"
+    }
+]
+
+
+function employees(employee) {
+    var output = []
+    employee.forEach(element => {
+        console.log([element.name])
+
+    });
+
+}
+// employees(employeeDetails)
