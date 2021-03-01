@@ -7,7 +7,7 @@ function createTables() {
     ];
     var body = document.querySelector("body");
     var tbl = document.createElement("table");
-    var tblBody = document.createElement("tbody");
+
     for (var i = 0; i <= 1; i++) {
         if (i === 0) {
             var row1 = document.createElement("tr");
