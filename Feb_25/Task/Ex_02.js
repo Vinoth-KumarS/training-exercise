@@ -26,18 +26,18 @@ const employeeDetails = [{
 
 
 function employeeList(employee) {
+    var activeEmployees = []
 
-    var ageList = []
     employee.forEach(element => {
-
-        if (element.age > 25) {
-            ageList.push(element.name)
+        if (element.active) {
+            activeEmployees.push(element)
         }
+
 
     });
     return {
+        activeList: activeEmployees,
 
-        agedPersons: ageList
     }
 }
 console.log(employeeList(employeeDetails))
