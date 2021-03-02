@@ -3,6 +3,7 @@ const employeeDetails = [{
         age: 26,
         native: "tirunelveli",
         active: true
+
     },
     {
         name: "umar",
@@ -24,17 +25,26 @@ const employeeDetails = [{
     }
 ]
 
-
-function employeeList(employee) {
-
-    var ageList = []
+// age older than 25 in a single array using foreach
+function employeeAges(employee) {
+    var olderThan25 = []
     employee.forEach(element => {
-
-        if (element.age > 26) {
-            ageList.push(element)
+        if (element.age > 25) {
+            olderThan25.push(element)
         }
 
     });
-    return ageList
+    return olderThan25
 }
-console.log(employeeList(employeeDetails))
+// console.log(employeeAges(employeeDetails))
+
+// age older than 25 in a single array using filter
+
+var olderThan25 = employeeDetails.filter(function(emp) {
+    if (emp.age > 25) {
+        return emp
+    }
+
+})
+
+console.log(olderThan25)

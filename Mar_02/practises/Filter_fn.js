@@ -25,16 +25,16 @@ const employeeDetails = [{
 ]
 
 
-function employeeList(employee) {
 
-    var ageList = []
-    employee.forEach(element => {
 
-        if (element.age > 26) {
-            ageList.push(element)
-        }
 
-    });
-    return ageList
+
+function employeeList(input) {
+    const activeStatus = []
+    input.filter(function(emp) {
+        emp.active == true
+        activeStatus.push(emp.active)
+    })
+    return input
 }
 console.log(employeeList(employeeDetails))

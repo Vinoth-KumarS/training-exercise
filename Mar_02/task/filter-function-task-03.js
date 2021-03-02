@@ -3,6 +3,7 @@ const employeeDetails = [{
         age: 26,
         native: "tirunelveli",
         active: true
+
     },
     {
         name: "umar",
@@ -24,18 +25,35 @@ const employeeDetails = [{
     }
 ]
 
-// seperaet array same as above only add active falg true
+// active properties in employeeDetails array when you loop using foreach
 
-function employeeList(employee) {
-    var activeEmployees = []
+function getEmployeesName(employee) {
+
+    var activeStatus = []
+
 
     employee.forEach(element => {
+
         if (element.active) {
-            activeEmployees.push(element)
+            activeStatus.push(element)
+
         }
 
-
     });
-    return activeEmployees
+    return activeStatus
 }
-console.log(employeeList(employeeDetails))
+
+// console.log(getEmployeesName(employeeDetails))
+
+
+// active properties in employeeDetails array when you loop using filter
+
+
+var activeStatus = employeeDetails.filter(function(emp) {
+    if (emp.active == true) {
+        return emp
+    }
+
+})
+
+console.log(activeStatus)

@@ -3,6 +3,7 @@ const employeeDetails = [{
         age: 26,
         native: "tirunelveli",
         active: true
+
     },
     {
         name: "umar",
@@ -25,16 +26,22 @@ const employeeDetails = [{
 ]
 
 
-function employeeList(employee) {
+// set of names in a single array using foreach
 
-    var ageList = []
+function employeeNames(employee) {
+    var outputArray = []
     employee.forEach(element => {
 
-        if (element.age > 26) {
-            ageList.push(element)
-        }
+        outputArray.push(element.name)
 
     });
-    return ageList
+    return outputArray
 }
-console.log(employeeList(employeeDetails))
+// console.log(employeeNames(employeeDetails))
+
+// set of names in a single array using array
+
+var outputArray = employeeDetails.map(function(empName) {
+        return empName.name
+    })
+    // console.log(outputArray)
