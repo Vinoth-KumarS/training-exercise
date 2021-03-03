@@ -25,23 +25,32 @@ const employeeDetails = [{
     }
 ]
 
+// separating the active employees using foreach
 
-// set of names in a single array using foreach
+function getEmployeesName1(employee) {
+    var onlineLists = []
 
-function employeeNames(employee) {
-    var outputArray = []
     employee.forEach(element => {
 
-        outputArray.push(element.name)
+        if (element.active) {
+
+            onlineLists.push(element.name)
+        }
 
     });
-    return outputArray
-}
-// console.log(employeeNames(employeeDetails))
 
-// set of names in a single array using array
+    return onlineLists
 
-var outputArray = employeeDetails.map(function(empName) {
-    return empName.name
+};
+// console.log(getEmployeesName1(employeeDetails))
+
+
+//  separating the active employees using filter
+
+var outputArr = employeeDetails.filter(function(emp) {
+    if (emp.active == true) {
+        return emp
+    }
 })
-console.log(outputArray)
+
+console.log(outputArr)
