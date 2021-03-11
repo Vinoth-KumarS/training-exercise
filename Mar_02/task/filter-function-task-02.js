@@ -40,7 +40,7 @@ function employeeAges(employee) {
 
 // age older than 25 in a single array using filter
 
-var olderThan25 = employeeDetails.filter(function(emp) {
+var ages = employeeDetails.filter(function(emp) {
     if (emp.age > 25) {
         return emp
     }

@@ -28,6 +28,27 @@ let myCar1 = new Car("Ford", 2014);
 // console.log(myCar1.carModel())
 
 
+
+
+var numbers = [10, 20, 30, 40, 50, 61, 70, 81, 90, 100]
+
+function myFilter(arr, cb) {
+    var resultArr = []
+    for (var j = 0; j < arr.length; j++) {
+        var cbResult = cb(arr[j])
+        if (cbResult) {
+            resultArr.push(cbResult[j])
+        }
+    }
+    return resultArr
+}
+var outputResult = myFilter(numbers, function(number) {
+        return number % 2 === 0
+
+    })
+    // console.log(outputResult)
+
+
 // Exercise : write a function called "every" which takes an array and a callback(predicate). "every"  function returns true if every object inside the array satisfies the condition in the callback , false if not.
 
 var numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
@@ -57,53 +78,15 @@ var result = every(numbers, function(num) {
     // console.log(result)
 
 
-var numbers = [10, 20, 30, 40, 50, 61, 70, 81, 90, 100]
-
-function myFilter(arr, cb) {
-    var resultArr = []
-    for (var j = 0; j < arr.length; j++) {
-        var cbResult = cb(arr[j])
-        if (cbResult) {
-            resultArr.push(cbResult[j])
-        }
-    }
-    return resultArr
-}
-var outputResult = myFilter(numbers, function(number) {
-        return number % 2 === 0
-
-    })
-    // console.log(outputResult)
 
 
 
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-function myFilter(arr, callback) {
-    var resultArr = []
-    for (var i = 0; i < arr.length; i++) {
-        var result = callback(arr[i], i, arr);
-        if (result) {
-            resultArr.push(arr[i])
-
-        }
-
-    }
-    return resultArr;
-}
-var output = myFilter(arr, function(input) {
-    return input < 7
-})
-
-// console.log(output);
-
-
-
-var ages = [{ age: 10 }, { age: 20 }, { age: 30 }, { age: 40 }, { age: 50 }, { age: 60 }, { age: 70 }, { age: 80 }, { age: 90 }, { age: 100 }]
+var ages = [{ age: 10 }, { age: 21 }, { age: 30 }, { age: 40 }, { age: 50 }, { age: 60 }, { age: 70 }, { age: 80 }, { age: 90 }, { age: 100 }]
 
 function every(arr, cb) {
     var arrResult = []
-    for (i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         var cbResult = cb(arr[i].age)
         if (cbResult) {
             arrResult.push(cbResult)
@@ -114,9 +97,10 @@ function every(arr, cb) {
     if (arrResult.length = arr.length) {
         return true
     }
-}
-var result = every(numbers, function(num) {
 
-    return num % 2 === 0
+}
+var result = every(ages, function(checkAge) {
+    return checkAge % 2 === 0
 })
+
 console.log(result)

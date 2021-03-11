@@ -1,0 +1,19 @@
+div {
+    color: blue;
+    font-size: large;
+    width: 50px;
+    background-color: seashell;
+}
+
+#first_div {
+    color: teal;
+}
+
+.div-set {
+    color: purple;
+}
+
+:nth-last-child(4) {
+    color: red
+}
+
