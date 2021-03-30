@@ -82,7 +82,7 @@ var result = every(numbers, function(num) {
 
 
 
-var ages = [{ age: 10 }, { age: 21 }, { age: 30 }, { age: 40 }, { age: 50 }, { age: 60 }, { age: 70 }, { age: 80 }, { age: 90 }, { age: 100 }]
+var ages = [{ age: 10 }, { age: 20 }, { age: 30 }, { age: 40 }, { age: 50 }, { age: 60 }, { age: 70 }, { age: 80 }, { age: 90 }, { age: 100 }]
 
 function every(arr, cb) {
     var arrResult = []

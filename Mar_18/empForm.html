@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="empForm.css" />
+</head>
+
+<body>
+    <form class="form-container" id="register" onsubmit="myFunction()" ;>
+        <h1>Employee Form</h1>
+
+        <div class="form-group">
+            <label class="form-label" for="name">User Name</label>
+            <div>
+                <input type="text" class="form-control" id="vname" placeholder="Enter Your Name" />
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="form-label" for="age">Age</label>
+            <div>
+                <input type="text" class="form-control" id="vage" placeholder="Enter Your Age" />
+            </div>
+        </div><br>
+        <div class="form-group">
+            <label class="form-label" for="place">Place</label>
+            <div>
+                <input type="text" class="form-control" id="vplace" placeholder="Enter Your Place" />
+            </div>
+        </div><br>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+
+    </form>
+    <table class="tlayout">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Place</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <script src="empForm.js"></script>
+    </table>
+
+</body>
+
+</html>
