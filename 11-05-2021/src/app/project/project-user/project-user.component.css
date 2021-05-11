@@ -1,0 +1,48 @@
+.userDiv {
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+  
+}
+.usersName {
+  background-color: white;
+  padding: 8px;
+  width: max-content;
+  height: max-content;
+  border: 1px solid black ;
+}
+.usersName:hover {
+  background-color: #343a40;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.card-wrapper {
+  width: 500px;
+  display: inline-block;
+}
+
+.card-wrapper {
+  width: 500px;
+  display: inline-block;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin: 20px;
+}
+
+.card-custom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card-titleDis {
+  font-weight: 200;
+  font-size: small;
+}
+
+.card-imgage {
+  max-width: 100px;
+}

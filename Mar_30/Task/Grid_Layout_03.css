@@ -1,0 +1,21 @@
+.bg {
+    color: black;
+    border: 1px solid rgba(86, 61, 124, .2);
+    font-weight: 600;
+}
+
+.ht1 {
+    height: 300px;
+}
+
+.ht2 {
+    height: 150px
+}
+
+.bgl1 {
+    background-color: firebrick;
+}
+
+.bgl2 {
+    background-color: teal
+}

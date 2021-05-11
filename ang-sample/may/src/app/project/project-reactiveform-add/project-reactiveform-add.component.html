@@ -1,0 +1,87 @@
+<!-- main app container -->
+<div class="container mt-5">
+    <div class="jumbotron bg">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1 class="mb-4">Project Creation - Reactive Form with Validation</h1>
+
+          <form [formGroup]="projectCreationForm" (ngSubmit)="onSubmit()">
+
+            <!-- Project Name -->
+            <div class="form-group">
+              <label class="mb-2">Project Name</label>
+              <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && controls.name.errors }" />
+              <div *ngIf="submitted && controls.name.errors" class="invalid-feedback">
+                <div *ngIf="controls.name.errors.required">Project Name is required</div>
+              </div>
+            </div>
+
+         <!-- Project Description -->
+            <div class="form-group">
+              <label class="mb-2">Project Description</label>
+              <textarea formControlName="description"
+                        class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && controls.description.errors }" >
+              </textarea>
+              <div *ngIf="submitted && controls.description.errors" class="invalid-feedback">
+                <div *ngIf="controls.description.errors.required">Project Description is required</div>
+              </div>
+            </div>
+
+                <!-- Project Type -->
+            <div class="form-group">
+              <label >Project Type</label>
+              <select class="custom-select mb-2 " formControlName="type">
+                <option value="">Select project type</option>
+                <option [value]="projectTypeOptions.SCRUM"> {{projectTypeOptions.SCRUM}}</option>
+                <option [value]="projectTypeOptions.KANBAN"> {{projectTypeOptions.KANBAN}}</option>
+              </select>
+              <div class="invalid-feedback" *ngIf="submitted && controls.type.errors?.required">
+                <sup>*</sup>Project Type is required
+              </div>
+            </div>
+
+             <!-- Project Owner -->
+             <div class="form-group">
+              <label>Project Owner</label>
+              <select class="custom-select  mb-2 " formControlName="owner">
+                <option value="">Select project owner</option>
+                <option *ngFor="let user of userOptions" [ngValue]="user.name">{{user.name}}</option>
+  
+              </select>
+              <div class="invalid-feedback" *ngIf="submitted && controls.owner.errors?.required">
+                <sup>*</sup>Project Owner is required
+              </div>
+            </div>
+
+           
+
+        
+            <!-- Project Status -->
+            <div class="form-group">
+              <label >Project Status</label>
+              <select class="custom-select mb-2" formControlName="status">
+                <option value="">Select project status</option>
+                <option [value]="projectTypeOptions. IN_PROGRESS"> {{ projectStatusOptions.IN_PROGRESS }}</option>
+                <option [value]="projectTypeOptions.STARTED"> {{ projectStatusOptions.STARTED }}</option>
+                <option [value]="projectStatusOptions.COMPLETED"> {{ projectStatusOptions.COMPLETED }}</option>
+              </select>
+              <div class="invalid-feedback" *ngIf="submitted && controls.status.errors?.required">
+                <sup>*</sup>Project Status is required
+              </div>
+            </div>
+
+               
+          
+
+                <!-- Create New Project -->
+            <div class="form-group text-center btn">
+              <button class="btn btn-primary mt-3">Create New</button>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

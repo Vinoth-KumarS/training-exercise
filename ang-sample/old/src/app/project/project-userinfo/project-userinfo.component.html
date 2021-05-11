@@ -1,0 +1,25 @@
+<div class="userDiv">
+    <h3 *ngFor="let user of users" class="usersName" (click)="onUserClicked(user)">{{ user.name }}</h3>
+</div>
+
+
+
+
+<div>
+    <div *ngFor="let project of projects">
+        <div>
+            <div>
+
+                <app-project-type [projectType]="project.type"></app-project-type>
+            </div>
+            <div>
+                <h3>{{ project.name | uppercase }}</h3>
+                <h5>{{ project.description }}</h5>
+            </div>
+        </div>
+        <div>
+            <div>{{ project.status }}</div>
+            <div>{{ project.startDate }}</div>
+        </div>
+    </div>
+</div>

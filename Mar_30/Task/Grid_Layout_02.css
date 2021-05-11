@@ -1,0 +1,47 @@
+.ht1 {
+    height: 150px;
+}
+
+.ht2 {
+    height: 375px;
+}
+
+.ht3 {
+    height: 535px;
+}
+
+.bg1 {
+    background-color: deeppink;
+}
+
+.bg2 {
+    background-color: teal;
+}
+
+.bg3 {
+    background-color: darkgreen;
+}
+
+.bg4 {
+    background-color: orangered;
+}
+
+.bg5 {
+    background-color: tomato;
+}
+
+.bg6 {
+    background-color: cornflowerblue
+}
+
+.bg7 {
+    background-color: dodgerblue;
+}
+
+.bg8 {
+    background-color: skyblue;
+}
+
+.mrg2 {
+    margin-right: -1rem!important;
+}

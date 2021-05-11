@@ -1,0 +1,25 @@
+.view {
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+}
+
+.name {
+    background-color: white;
+    padding: 8px;
+    width: max-content;
+    height: max-content;
+    border: 1px solid black;
+}
+
+.usersName:hover {
+    background-color: #343a40;
+    color: white;
+    padding: 8px;
+    cursor: crosshair;
+    border-radius: 3px;
+}
+
+.view-details {
+    max-width: 100px;
+}

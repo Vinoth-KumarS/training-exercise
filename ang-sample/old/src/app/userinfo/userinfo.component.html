@@ -1,0 +1,25 @@
+<div class="userDiv">
+    <h3 *ngFor="let user of users" class="usersName" (click)="onUserClicked(user)">{{ user.name }}</h3>
+</div>
+
+
+
+
+<div>
+    <div *ngFor="let project of projects" class="card-wrapper">
+        <div class="card-custom">
+            <div class="card-imgage card-img">
+
+                <app-project-type [projectType]="project.type" class="card-img"></app-project-type>
+            </div>
+            <div class="card-description">
+                <h3 class="card-title">{{ project.name | uppercase }}</h3>
+                <h5 class="card-titleDis">{{ project.description }}</h5>
+            </div>
+        </div>
+        <div class="card-custom">
+            <div class="pro-status">{{ project.status }}</div>
+            <div class="pro-date">{{ project.startDate }}</div>
+        </div>
+    </div>
+</div>

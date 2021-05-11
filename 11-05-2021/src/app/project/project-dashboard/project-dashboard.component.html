@@ -1,0 +1,17 @@
+<!-- Starts Project Summary -->
+<app-project-summary></app-project-summary>
+<!--End Project Summary-->
+
+
+<!-- Starts Project List -->
+<div class="project-list">
+    <app-project-list (projectSelected)="onProjectSelect($event)" [selectedProject]="selectedProject"></app-project-list>
+</div>
+<!-- End Project List -->
+
+
+<!-- Starts Project Details -->
+<div class="project-details">
+    <app-project-reactiveform-add></app-project-reactiveform-add>
+</div>
+<!-- End Project Details -->
